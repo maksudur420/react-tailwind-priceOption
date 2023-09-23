@@ -16,15 +16,15 @@ const Navbar = () => {
 
 
   return (
-    <nav>
-        <div className='md:hidden  bg-blue-500 ' onClick={()=>setOpen(!open)}>
+    <nav className='md:mx-10'>
+        <div className='md:hidden p-4 bg-blue-500 ' onClick={()=>setOpen(!open)}>
             {
                 !open?<AiOutlineMenu className='text-2xl'/> :<AiOutlineClose className='text-2xl'/>
             }
             
         </div>
         
-      <ul className={`${open? "top-6":"-top-60"} md:flex w-full justify-center bg-blue-300 shadow-lg absolute md:static px-10`}>
+      <ul className={`${open? "top-14":"-top-72"} py-3 md:flex w-full rounded-lg text-white font-semibold text-xl justify-center bg-blue-600 shadow-lg absolute md:static px-10`}>
         {
             routes.map(route=><Link className="text-center" key={route.Id} route={route}></Link>)
         }
